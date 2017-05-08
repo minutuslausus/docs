@@ -272,7 +272,7 @@ export class GroceryListService {
 
   load() {
     let headers = new Headers();
-    headers.append("Authorization", "Bearer " + Config.token);
+    headers.append("Authorization", `Bearer ${Config.token}`);
 
     return this.http.get(Config.apiUrl + "Groceries", {
       headers: headers
